@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Data
 @Service
-public class EmplpoyeeService {
+public class EmployeeService {
 
     private final EmployeeProxy employeeProxy;
 
-    public EmplpoyeeService(EmployeeProxy employeeProxy) {
+    public EmployeeService(EmployeeProxy employeeProxy) {
         this.employeeProxy = employeeProxy;
     }
 

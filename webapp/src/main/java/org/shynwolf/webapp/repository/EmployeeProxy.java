@@ -38,21 +38,21 @@ public class EmployeeProxy {
         return response.getBody();
     }
 
-    public Employee getEmployee() {
-        String getEmployeeUrl = props.getApiUrl() + "/employee";
-
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<List<Employee>> response = restTemplate.exchange(
-                getEmployeeUrl,
-                HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<List<Employee>>() {}
-        );
-
-        log.debug("Get Employees call {}", response.getStatusCode().toString());
-
-        return response.getBody();
-    }
+//    public Employee getEmployee() {
+//        String getEmployeeUrl = props.getApiUrl() + "/employee";
+//
+//        RestTemplate restTemplate = new RestTemplate();
+//        ResponseEntity<List<Employee>> response = restTemplate.exchange(
+//                getEmployeeUrl,
+//                HttpMethod.GET,
+//                null,
+//                new ParameterizedTypeReference<List<Employee>>() {}
+//        );
+//
+//        log.debug("Get Employees call {}", response.getStatusCode().toString());
+//
+//        return response.getBody();
+//    }
 
     public Employee createEmployee(Employee e) {
         String createEmployeeUrl = props.getApiUrl() + "/addEmployee";
@@ -68,5 +68,8 @@ public class EmployeeProxy {
         log.debug("Create Employee call {}", response.getStatusCode().toString());
 
         return response.getBody();
+    }
+
+    public void deleteEmployee(int id) {
     }
 }
