@@ -1,0 +1,5 @@
+server:
+  port: 9001
+
+webapp:
+  api-url: htpp://localhost:9000/
